@@ -28,5 +28,6 @@ public class App {
 
         System.out.println("5! = " + calculator.factorial(5));
         System.out.println("6! = " + calculator.factorial(6));
+        System.out.println("6! = " + calculator.factorial(7));
     }
 }
