@@ -13,4 +13,6 @@ public interface Calculator {
     BigDecimal divide(BigDecimal a, BigDecimal b);
 
     BigDecimal power(BigDecimal a, int p);
+
+    int factorial(int a);
 }
