@@ -9,4 +9,6 @@ public interface Calculator {
     double multiply(double a, double b);
 
     double divide(double a, double b);
+
+    double power(double a, int p);
 }

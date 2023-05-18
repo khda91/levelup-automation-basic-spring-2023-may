@@ -17,5 +17,7 @@ public class App {
 
         System.out.println("2.4 / 2.8 = " + calculator.divide(2.4, 2.8));
         System.out.println("5.3 / 0.7 = " + calculator.divide(5.3, 0.7));
+
+        System.out.println("5 power 2 = " + calculator.power(5, 2));
     }
 }

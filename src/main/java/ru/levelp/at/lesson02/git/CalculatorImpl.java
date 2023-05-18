@@ -24,4 +24,20 @@ public class CalculatorImpl implements Calculator {
         }
         return a / b;
     }
+
+    @Override
+    public double power(double a, int p) {
+        if (p < 0) {
+            throw new IllegalArgumentException("Степерь не может быть отрицательной в нашей реализации!!!");
+        } else if (p == 0) {
+            return 1;
+        }
+
+        var res = 1.0;
+        for (int i = 0; i < p; i++) {
+            res *= a;
+        }
+
+        return res;
+    }
 }
