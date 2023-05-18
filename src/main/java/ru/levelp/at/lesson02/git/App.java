@@ -11,9 +11,11 @@ public class App {
 
         System.out.println("2.4 - 2.8 = " + calculator.subtract(2.4, 2.8));
         System.out.println("5.3 - 0.7 = " + calculator.subtract(5.3, 0.7));
+        System.out.println("5.3 - 0.7 = " + calculator.subtract(-0.9, 0.7));
 
         System.out.println("2.4 * 2.8 = " + calculator.multiply(2.4, 2.8));
         System.out.println("5.3 * 0.7 = " + calculator.multiply(5.3, 0.7));
+        System.out.println("5.3 * 0.7 = " + calculator.multiply(0.3, 0.7));
 
         System.out.println("2.4 / 2.8 = " + calculator.divide(2.4, 2.8));
         System.out.println("5.3 / 0.7 = " + calculator.divide(5.3, 0.7));
