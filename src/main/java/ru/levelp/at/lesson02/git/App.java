@@ -10,6 +10,7 @@ public class App {
         System.out.println("2.4 + 2.8 = " + calculator.add(new BigDecimal(2.4), new BigDecimal(2.8)));
         System.out.println("5.3 + 0.7 = " + calculator.add(new BigDecimal(5.3), new BigDecimal(0.7)));
         System.out.println("-0.7 + 0.7 = " + calculator.add(new BigDecimal(-0.7), new BigDecimal(0.7)));
+        System.out.println("-0.7 + 0.7 = " + calculator.add(new BigDecimal(-0.7), new BigDecimal(0.7)));
 
         System.out.println("2.4 - 2.8 = " + calculator.subtract(new BigDecimal(2.4), new BigDecimal(2.8)));
         System.out.println("5.3 - 0.7 = " + calculator.subtract(new BigDecimal(5.3), new BigDecimal(0.7)));
