@@ -1,16 +1,18 @@
 package ru.levelp.at.lesson02.git;
 
+import java.math.BigDecimal;
+
 public interface Calculator {
 
-    double add(double a, double b);
+    BigDecimal add(BigDecimal a, BigDecimal b);
 
-    double subtract(double a, double b);
+    BigDecimal subtract(BigDecimal a, BigDecimal b);
 
-    double multiply(double a, double b);
+    BigDecimal multiply(BigDecimal a, BigDecimal b);
 
-    double divide(double a, double b);
+    BigDecimal divide(BigDecimal a, BigDecimal b);
 
-    double power(double a, int p);
+    BigDecimal power(BigDecimal a, int p);
 
     int factorial(int a);
 }
