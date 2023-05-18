@@ -40,4 +40,19 @@ public class CalculatorImpl implements Calculator {
 
         return res;
     }
+
+    @Override
+    public int factorial(int a) {
+        if (a < 1) {
+            throw new IllegalArgumentException("Нет факториала для отрицательного числа!!!");
+        }
+
+        int f = 1;
+
+        for (int i = 1; i < a + 1; i++) {
+            f *= i;
+        }
+
+        return f;
+    }
 }

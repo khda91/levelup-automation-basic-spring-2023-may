@@ -11,4 +11,6 @@ public interface Calculator {
     double divide(double a, double b);
 
     double power(double a, int p);
+
+    int factorial(int a);
 }
