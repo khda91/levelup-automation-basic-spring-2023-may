@@ -4,3 +4,7 @@ build
 .idea
 
 *.iml
+try_build
+
+.gradle
+build
