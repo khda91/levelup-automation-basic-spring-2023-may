@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<!-- @BeforeSuite -->
+<suite name="Calculator All Suite">
+
+    <!-- @BeforeTest -->
+    <test name="Calculator Decrement Tests">
+        <classes>
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.tests.CalculatorSubtractSampleTest">
+                <!-- @BeforeMethod -->
+                <!-- @Test -->
+                <!-- @AfterMethod -->
+            </class>
+            <!-- @AfterClass -->
+
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.tests.CalculatorDivideSampleTest"/>
+            <!-- @AfterClass -->
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+    <!-- @BeforeTest -->
+    <test name="Calculator Increment Tests">
+        <classes>
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.tests.CalculatorAddSampleTest"/>
+            <!-- @AfterClass -->
+            <!-- @BeforeClass -->
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.tests.CalculatorMultiplySampleTest"/>
+            <!-- @AfterClass -->
+        </classes>
+    </test>
+    <!-- @AfterTest -->
+
+</suite>
+<!-- @AfterSuite -->

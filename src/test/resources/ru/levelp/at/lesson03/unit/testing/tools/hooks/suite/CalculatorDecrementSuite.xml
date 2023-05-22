@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Calculator Decrement Suite">
+
+    <test name="Calculator Decrement Tests">
+        <classes>
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.suite.CalculatorSubtractSampleTest"/>
+            <class name="ru.levelp.at.lesson03.unit.testing.tools.hooks.suite.CalculatorDivideSampleTest"/>
+        </classes>
+    </test>
+
+</suite>
