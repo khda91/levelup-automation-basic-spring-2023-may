@@ -17,4 +17,9 @@ public class CalculatorDivideSampleTest extends BaseCalculatorTest {
         // assert
         assertEquals(actual, expected, "Calculator divide function error");
     }
+
+    @Test
+    public void divideByZeroTest() {
+        calculator.divide(new BigDecimal("2.0"), new BigDecimal(0));
+    }
 }
