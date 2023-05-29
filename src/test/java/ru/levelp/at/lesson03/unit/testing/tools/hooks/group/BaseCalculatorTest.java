@@ -14,7 +14,7 @@ public abstract class BaseCalculatorTest {
     @BeforeGroups(groups = {GroupNames.POSITIVE_TEST_GROUP, GroupNames.NEGATIVE_TEST_GROUP,
         GroupNames.INCREMENT_TEST_GROUP, GroupNames.DECREMENT_TEST_GROUP})
     public void beforeGroups() {
-        System.out.println(this.getClass().getName() + " before groups");
+        System.out.println(this.getClass().getName() + " all before groups");
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -26,19 +26,19 @@ public abstract class BaseCalculatorTest {
 
     @AfterMethod(groups = {GroupNames.POSITIVE_TEST_GROUP})
     public void positiveGroupTearDown() {
-        System.out.println(this.getClass().getName() + " positive group tear down");
+        System.out.println(this.getClass().getName() + " positive group after method tear down");
         calculator = null;
     }
 
     @AfterMethod(groups = {GroupNames.NEGATIVE_TEST_GROUP})
     public void negativeGroupTearDown() {
-        System.out.println(this.getClass().getName() + " negative group tear down");
+        System.out.println(this.getClass().getName() + " negative group after method tear down");
         calculator = null;
     }
 
     @AfterGroups(groups = {GroupNames.POSITIVE_TEST_GROUP, GroupNames.NEGATIVE_TEST_GROUP,
         GroupNames.INCREMENT_TEST_GROUP, GroupNames.DECREMENT_TEST_GROUP})
     public void afterGroups() {
-        System.out.println(this.getClass().getName() + " after groups");
+        System.out.println(this.getClass().getName() + " all after groups");
     }
 }
