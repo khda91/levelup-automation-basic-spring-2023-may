@@ -19,6 +19,8 @@
         <selenium-java.version>4.9.1</selenium-java.version>
         <assertj-core.version>3.24.2</assertj-core.version>
         <javafaker.version>1.0.2</javafaker.version>
+        <selenide.version>6.15.0</selenide.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
 
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
     </properties>
@@ -54,6 +56,24 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>${javafaker.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.yaml</groupId>
+                    <artifactId>snakeyaml</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>${snakeyaml.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
         </dependency>
 
     </dependencies>
