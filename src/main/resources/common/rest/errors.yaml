@@ -1,0 +1,53 @@
+openapi: 3.0.3
+
+info:
+  title: 'LevelUp Platform API: Error responses'
+  description: Standard error responses shared across microservices.
+  version: '1.0'
+  contact:
+    name: Dmitry Khodakovsky
+    email: khda91@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+paths: {}
+
+components:
+  responses:
+    BadRequest:
+      description: A malformed request was sent.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
+    Unauthorized:
+      description: Authentication is required to access the resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
+    Forbidden:
+      description: There are no permissions to access the resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
+    NotFound:
+      description: The requested resource could not be found.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
+    Conflict:
+      description: The request could not be completed due to a conflict with the current state of the target resource.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
+    InternalServerError:
+      description: A server side error occurred while processing the request.
+      content:
+        application/problem+json:
+          schema:
+            $ref: 'schemas.yaml#/components/schemas/ProblemResponse'
