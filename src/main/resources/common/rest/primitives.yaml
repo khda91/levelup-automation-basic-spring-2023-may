@@ -1,0 +1,32 @@
+openapi: 3.0.3
+
+info:
+  title: 'LevelUp Platform API: Primitives data types'
+  description: Primitives data types shared across microservices.
+  version: '1.0'
+  contact:
+    name: Dmitry Khodakovsky
+    email: khda91@gmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+paths: {}
+
+components:
+  schemas:
+    personId:
+      description: Universally unique and immutable person identifier used across the whole platform.
+      type: string
+      pattern: ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+      example: 123e4567-e89b-12d3-a456-426655440000
+    UUID:
+      description: Universally unique and immutable identifier.
+      type: string
+      pattern: ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+      example: 4223e4567-e89b-12d3-a456-426655440000
+    courseId:
+      description: Universally unique and immutable course identifier used across the whole platform.
+      type: string
+      pattern: ^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$
+      example: 123e4567-e89b-12d3-a456-426655440000
