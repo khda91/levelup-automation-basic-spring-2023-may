@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Тесты к разбору",
+        "traceRegex": ".*IndexOutOfBoundsException.*"
+    },
+    {
+        "name": "Тесты к разбору",
+        "traceRegex": ".*NullPointerException.*"
+    },
+    {
+        "name": "Тесты к разбору",
+        "traceRegex": ".*ArithmeticException.*"
+    },
+    {
+        "name": "Ошибки сохранения данных",
+        "messageRegex": ".*Проверка введённых данных.*"
+    }
+]
