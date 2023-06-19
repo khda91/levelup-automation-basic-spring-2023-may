@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Allure Sample Suite">
+
+    <listeners>
+        <listener class-name="ru.levelp.at.lesson1011.cicd.allure.listeners.AllureScreenshotAttachmentListener"/>
+    </listeners>
+
+    <test name="Allure Tests">
+        <packages>
+            <package name="ru.levelp.at.lesson1011.cicd.allure.*"/>
+        </packages>
+    </test>
+</suite>

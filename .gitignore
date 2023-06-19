@@ -8,3 +8,6 @@ try_build
 
 .gradle
 build
+
+allure-results
+.allure
