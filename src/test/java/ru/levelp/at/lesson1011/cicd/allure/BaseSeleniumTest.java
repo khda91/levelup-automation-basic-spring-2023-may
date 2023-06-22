@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
@@ -19,8 +20,16 @@ public abstract class BaseSeleniumTest {
     @BeforeMethod(alwaysRun = true)
     @Step("Инициализация браузера")
     public void setUp(ITestContext context) {
+        var options = new ChromeOptions();
+        System.out.println("-----------" + System.getenv("HEADLESS"));
+        var headless = Boolean.parseBoolean(System.getenv("HEADLESS"));
+        if (headless) {
+            System.out.println("here");
+            options.addArguments("--headless");
+        }
+
         faker = new Faker();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofMillis(10000));
         context.setAttribute("driver", driver);
     }

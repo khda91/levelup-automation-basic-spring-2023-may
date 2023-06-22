@@ -1,0 +1,9 @@
+.allure
+.gradle
+.idea
+allure-results
+build.gradle.kts
+target
+try_build
+example.txt
+*.iml

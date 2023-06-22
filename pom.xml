@@ -146,6 +146,45 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite>/src/test/resources/ru/levelp/at/lesson1011/cicd/allure/AllureSuite.xml</suite>
+            </properties>
+        </profile>
+        <profile>
+            <id>suite1</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite>/src/test/resources/ru/levelp/at/lesson1011/cicd/allure/AllureSuite1.xml</suite>
+            </properties>
+        </profile>
+        <profile>
+            <id>suite2</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite>/src/test/resources/ru/levelp/at/lesson1011/cicd/allure/AllureSuite2.xml</suite>
+            </properties>
+        </profile>
+        <profile>
+            <id>suite3</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite>/src/test/resources/ru/levelp/at/lesson1011/cicd/allure/AllureSuite3.xml</suite>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -224,6 +263,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.basedir}/${suite}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>
