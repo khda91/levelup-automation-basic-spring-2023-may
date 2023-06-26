@@ -30,6 +30,8 @@
         <jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
         <allure.version>2.22.2</allure.version>
         <aspectj.version>1.9.19</aspectj.version>
+        <hikari-cp.version>5.0.1</hikari-cp.version>
+        <spring.version>5.3.28</spring.version>
 
         <maven-checkstyle-plugin.version>3.2.0</maven-checkstyle-plugin.version>
         <openapi-generator-maven-plugin.version>5.1.0</openapi-generator-maven-plugin.version>
@@ -142,6 +144,19 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>${allure.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikari-cp.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>
