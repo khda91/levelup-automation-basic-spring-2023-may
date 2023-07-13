@@ -8,9 +8,11 @@ public class ChainOfInvocationTest {
 
     @Test
     public void producerTest() {
+        var user = new UserDto("sasa", "sasas", "jdhavuehaqwiuve");
         new KafkaProducer().topic("topic1")
             .config(Map.of())
-            .sendMessage(new UserDto("sasa", "sasas", "jdhavuehaqwiuve"));
+            .sendMessage(user);
+        sss(user.getEmail());
     }
 
     @Test
@@ -18,5 +20,15 @@ public class ChainOfInvocationTest {
         var obj = new KafkaConsumer().topic("topic1")
                            .config(Map.of())
                            .searchMessage(searchCriteria -> true);
+    }
+
+    private void sss(String s) {
+        s = s + " jnsdfjdhjas";
+        System.out.println(s);
+    }
+
+    private void ssss(final String s) {
+        // s = s + " jnsdfjdhjas"; ошибка потому что final
+        System.out.println(s);
     }
 }
